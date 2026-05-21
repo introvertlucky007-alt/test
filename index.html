@@ -1,152 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-    <title>IgniteX</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>IgniteX - Solar Powered Study Hub</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{background:#0b0f1a;color:#fff;overflow-x:hidden;}
+
+header{
+position:fixed;top:0;left:0;width:100%;padding:15px 60px;
+background:rgba(10,15,30,0.8);
+backdrop-filter:blur(10px);
+z-index:1000;
+display:flex;justify-content:space-between;align-items:center;
+}
+
+.logo{font-size:22px;font-weight:700;color:#ff7a18;letter-spacing:1px;}
+
+nav a{
+color:#fff;margin-left:20px;text-decoration:none;font-weight:500;
+transition:0.3s;
+}
+nav a:hover{color:#ff7a18;}
+
+.hero{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+text-align:center;
+background:linear-gradient(120deg,#0b0f1a,#111a33);
+}
+.hero h1{font-size:50px;margin-bottom:10px;animation:fadeIn 1.2s ease;}
+.hero p{font-size:18px;opacity:0.8;max-width:600px;}
+
+@keyframes fadeIn{
+from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}
+}
+
+.section{padding:80px 60px;}
+.section h2{font-size:32px;margin-bottom:40px;color:#ff7a18;}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+}
+
+.card{
+background:rgba(255,255,255,0.05);
+padding:20px;
+border-radius:15px;
+text-align:center;
+transition:0.3s;
+}
+.card:hover{transform:translateY(-8px);background:rgba(255,122,24,0.15);}
+
+.card h3{margin:10px 0 5px;}
+.card span{font-size:14px;opacity:0.7;}
+
+.cta{
+text-align:center;
+padding:80px 20px;
+background:linear-gradient(120deg,#ff7a18,#ff512f);
+}
+.cta h2{font-size:30px;margin-bottom:15px;}
+.cta button{
+padding:12px 25px;
+border:none;
+background:#0b0f1a;
+color:#fff;
+font-size:16px;
+border-radius:8px;
+cursor:pointer;
+}
+
+footer{
+text-align:center;
+padding:20px;
+background:#070a12;
+font-size:14px;
+opacity:0.7;
+}
+
+@media(max-width:768px){
+.hero h1{font-size:32px;}
+header{padding:15px 20px;}
+.section{padding:60px 20px;}
+}
+</style>
 </head>
+
 <body>
 
 <header>
-    <a href="#home" class="logo">Ignite<span>X</span></a>
-
-    <nav>
-        <a href="#home" class="active">Home</a>
-        <a href="#services">Services</a>
-        <a href="#achievements">Achievements</a>
-        <a href="#leadership">Leadership</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-    </nav>
+<div class="logo">IgniteX</div>
+<nav>
+<a href="#about">About</a>
+<a href="#team">Team</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+</nav>
 </header>
 
-<section class="home" id="home">
-    <div class="home-content">
-        <h1>Welcome to <span>IgniteX</span></h1>
-        <h3 class="typing-text">Representing <span class="animated-words"></span></h3>
-        <p>Igniting minds. Empowering youth. Creating a smarter, safer future.</p>
-
-        <div class="social-icons">
-            <a href="https://www.linkedin.com/company/ignitexinnovators/" target="_blank">
-                <i class="fa-brands fa-linkedin"></i>
-            </a>
-            <a href="https://github.com" target="_blank">
-                <i class="fa-brands fa-github"></i>
-            </a>
-            <a href="https://twitter.com" target="_blank">
-                <i class="fa-brands fa-x-twitter"></i>
-            </a>
-            <a href="https://www.instagram.com/ignite_x2025/" target="_blank">
-                <i class="fa-brands fa-instagram"></i>
-            </a>
-            <a href="https://www.facebook.com" target="_blank">
-                <i class="fa-brands fa-facebook"></i>
-            </a>
-        </div>
-
-        <a href="#contact" class="btn">More Content Coming Soon!</a>
-    </div>
-    
-    <div class="home-img">
-        <img src="main.jpg" alt="IgniteX Main Image">
-    </div>
+<section class="hero">
+<h1>IgniteX</h1>
+<p>Solar Powered Study Hub – Building the future of sustainable learning and innovation.</p>
 </section>
 
-<section id="services" class="page-section placeholder-section">
-    <div class="placeholder-content">
-        <i class="fa-solid fa-layer-group placeholder-icon"></i>
-        <h2>Our Services</h2>
-        <p>Exciting developments are underway. Stay tuned!</p>
-    </div>
+<section class="section" id="about">
+<h2>About Us</h2>
+<p style="max-width:800px;opacity:0.8;line-height:1.6;">
+IgniteX is a student-led innovation startup focused on creating solar-powered study hubs that provide uninterrupted learning environments for rural and urban students. We believe in sustainable education powered by clean energy.
+</p>
 </section>
 
-<section id="achievements" class="page-section placeholder-section alternate-bg">
-    <div class="placeholder-content">
-        <i class="fa-solid fa-trophy placeholder-icon"></i>
-        <h2>Achievements</h2>
-        <p>Milestones and transformations worth celebrating are coming right up.</p>
-    </div>
+<section class="section" id="team">
+<h2>Our Team</h2>
+<div class="cards">
+<div class="card">
+<h3>Akash Ganti</h3>
+<span>CEO</span>
+</div>
+<div class="card">
+<h3>Amritha Murugan</h3>
+<span>Founder</span>
+</div>
+<div class="card">
+<h3>Aravapalli Varun</h3>
+<span>Co-Founder</span>
+</div>
+<div class="card">
+<h3>Amritha Limma</h3>
+<span>Executive Director</span>
+</div>
+</div>
 </section>
 
-<section id="leadership" class="page-section leadership-section">
-    <h2 class="section-title">Our Leadership</h2>
-
-    <div class="leadership-container">
-        <div class="leader-card">
-            <div class="img-container">
-                <img src="img1.png" alt="Ganti Sai Kapil Akash">
-            </div>
-            <h3>Ganti Sai Kapil Akash</h3>
-            <p class="role">Co-Founder / Leader</p>
-        </div>
-
-        <div class="leader-card">
-            <div class="img-container">
-                <img src="img2.jpg" alt="Aravapalli Varun">
-            </div>
-            <h3>Aravapalli Varun</h3>
-            <p class="role">Co-Founder / Leader</p>
-        </div>
-
-        <div class="leader-card">
-            <div class="img-container">
-                <img src="img3.jpg" alt="Leader 3">
-            </div>
-            <h3>Leader Name 3</h3>
-            <p class="role">Executive Member</p>
-        </div>
-
-        <div class="leader-card">
-            <div class="img-container">
-                <img src="img4.jpg" alt="Leader 4">
-            </div>
-            <h3>Leader Name 4</h3>
-            <p class="role">Executive Member</p>
-        </div>
-    </div>
+<section class="section" id="projects">
+<h2>Projects</h2>
+<p style="opacity:0.8;max-width:800px;line-height:1.6;">
+Our flagship project focuses on solar-powered study hubs equipped with smart lighting, offline digital learning tools, and renewable energy systems designed for long-term sustainability.
+</p>
 </section>
 
-<section id="about" class="page-section about-section alternate-bg">
-    <div class="about-container">
-        <h2>Our Journey</h2>
-
-        <p>
-            IgniteX was born from a simple yet powerful idea—to inspire and empower the youth
-            to become confident, responsible, and future-ready changemakers. Our journey began
-            with a belief that young minds, when guided with the right knowledge and opportunities,
-            can create meaningful impact in society. Through hands-on initiatives, awareness programs,
-            and real-world missions, we have focused on turning ideas into action.
-        </p>
-
-        <p>
-            As part of our Changemakers journey, we actively engaged with communities, addressed
-            social challenges, and worked closely with students to promote learning beyond textbooks.
-            One of our most impactful milestones was educating government school students on
-            cybersecurity and digital responsibility, helping them understand the safe and ethical
-            use of technology in today’s connected world.
-        </p>
-
-        <p>
-            At IgniteX, we believe growth comes from awareness, action, and accountability.
-            Every step of our journey reflects our dedication to nurturing leadership,
-            creativity, and social responsibility among young individuals.
-        </p>
-
-        <div class="motto">
-            “Igniting minds. Empowering youth. Creating a smarter, safer future.”
-        </div>
-    </div>
+<section class="cta">
+<h2>Join IgniteX</h2>
+<p>Be part of the innovation movement</p>
+<br>
+<button onclick="alert('Thank you for your interest!')">Get Involved</button>
 </section>
 
-<section id="contact" class="page-section placeholder-section">
-    <div class="placeholder-content">
-        <i class="fa-solid fa-paper-plane placeholder-icon"></i>
-        <h2>Get In Touch</h2>
-        <p>Have questions or want to collaborate? Connect with us via our social channels above while we set up our inbox!</p>
-    </div>
-</section>
+<footer>
+© 2026 IgniteX. All Rights Reserved.
+</footer>
+
+<script>
+window.addEventListener('scroll',()=>{
+const cards=document.querySelectorAll('.card');
+cards.forEach(c=>{
+const rect=c.getBoundingClientRect();
+if(rect.top<window.innerHeight-100){c.style.opacity=1;c.style.transform='translateY(0)';}
+});
+});
+</script>
 
 </body>
 </html>
